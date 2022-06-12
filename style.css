@@ -40,7 +40,7 @@
 }
 
 body {
-  background-color: whitesmoke;
+  background-color: rgb(206, 206, 206);
 }
 
 .reveal {
@@ -99,14 +99,21 @@ a {
 /* End Header */
 
 /* Hero */
+
+#hero {
+  padding: 0;
+  height: 100vh;
+}
 #hero video {
   position: relative;
   width: 100%;
   height: 100vh;
   object-fit: cover;
+  margin: 0;
+  border: none;
 }
 
-#hero .headerContain {
+#hero .header-contain {
   position: absolute;
   z-index: 1;
   left: 50%;
@@ -121,19 +128,19 @@ a {
   margin: auto;
 }
 
-#hero .headerContain h1 {
+#hero .header-contain h1 {
   margin: 20px;
   font-size: 50px;
   font-weight: 400;
 }
 
-#hero .headerContain h4 {
+#hero .header-contain h4 {
   margin: 20px;
   font-size: 1rem;
   font-weight: 300;
 }
 
-#hero .headerContain .searchbar {
+#hero .header-contain .searchbar {
   margin: 20px;
   display: flex;
   height: 40px;
@@ -141,7 +148,7 @@ a {
   justify-content: center;
 }
 
-#hero .headerContain .searchbar form {
+#hero .header-contain .searchbar form {
   display: inline-flex;
   justify-content: center;
   width: 400px;
@@ -149,7 +156,7 @@ a {
   border-radius: 10px;
 }
 
-#hero .headerContain input {
+#hero .header-contain input {
   background: url("./images//search.png") no-repeat 13px center;
   background-size: 20px;
   align-items: center;
@@ -164,11 +171,11 @@ a {
   background-color: rgba(255, 255, 255, 0.734);
 }
 
-#hero .headerContain input:focus {
+#hero .header-contain input:focus {
   background-color: rgba(255, 255, 255, 0.734);
 }
 
-#hero .headerContain button {
+#hero .header-contain button {
   cursor: pointer;
   display: inline-block;
   padding: 10px 20px;
@@ -182,31 +189,221 @@ a {
   font-weight: 500;
 }
 
-#hero .headerContain button:hover {
+#hero .header-contain button:hover {
   background-color: #162d54;
   color: white;
 }
 /* End Hero */
 
+/* About */
 #about {
-  height: 500px;
+  position: relative;
+  display: flex;
+  padding: 100px 50px;
+  max-width: 1400px;
+  margin: auto;
 }
 
-#brands {
+#about img {
   height: 500px;
+  width: auto;
+  border-radius: 20px;
+  box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.469);
+  transition: 0.5s;
 }
+
+#about img:hover {
+  filter: grayscale(1);
+}
+
+#about .about-contain {
+  display: flex;
+  flex-direction: column;
+  padding: 50px;
+}
+
+#about .about-contain h1 {
+  padding: 10px;
+  font-weight: bold;
+}
+
+#about .about-contain p {
+  padding: 10px;
+  text-align: justify;
+  font-size: 20px;
+  line-height: 1.3;
+}
+
+#about .about-contain .about-links {
+  padding: 10px;
+  font-size: 20px;
+}
+
+#about .about-contain .about-links a {
+  color: #162d54;
+  padding: 10px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* End About */
+
+/* Brands */
+
+#brands {
+  height: 300px;
+  background-color: gray;
+  display: flex;
+  align-items: center;
+  background-image: url("./images/brands-image.jpg");
+  background-position: 25% 40%;
+  background-size: cover;
+  box-shadow: inset 0 0 0 2000px rgba(255, 255, 255, 0.539);
+}
+
+/* Slider */
+.container {
+  width: 30000px;
+}
+.slick-slide {
+  margin: 0px 30px;
+}
+
+.slick-slide img {
+  width: 100%;
+}
+
+.slick-slider {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-touch-callout: none;
+  -khtml-user-select: none;
+  -ms-touch-action: pan-y;
+  touch-action: pan-y;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.slick-list {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+.slick-list:focus {
+  outline: none;
+}
+.slick-list.dragging {
+  cursor: pointer;
+  cursor: hand;
+}
+
+.slick-slider .slick-track,
+.slick-slider .slick-list {
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+.slick-track {
+  position: relative;
+  top: 0;
+  left: 0;
+  display: block;
+}
+.slick-track:before,
+.slick-track:after {
+  display: table;
+  content: "";
+}
+.slick-track:after {
+  clear: both;
+}
+.slick-loading .slick-track {
+  visibility: hidden;
+}
+
+.slick-slide {
+  display: none;
+  float: left;
+  height: 100%;
+  min-height: 1px;
+}
+[dir="rtl"] .slick-slide {
+  float: right;
+}
+.slick-slide img {
+  display: block;
+}
+.slick-slide.slick-loading img {
+  display: none;
+}
+.slick-slide.dragging img {
+  pointer-events: none;
+}
+.slick-initialized .slick-slide {
+  display: block;
+}
+.slick-loading .slick-slide {
+  visibility: hidden;
+}
+.slick-vertical .slick-slide {
+  display: block;
+  height: auto;
+  border: 1px solid transparent;
+}
+.slick-arrow.slick-hidden {
+  display: none;
+}
+
+.slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  height: 100px;
+}
+.slide img {
+  margin: auto;
+  align-items: center;
+  display: flex;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+}
+/* End Brands */
+
+/* Testimonials */
 #testimonials {
   height: 500px;
 }
+/* End Testimonials */
+
 #buildings {
   height: 500px;
+  background-color: purple;
 }
-#blogs {
+#blog {
   height: 500px;
+  background-color: red;
 }
 #places {
   height: 500px;
+  background-color: yellow;
+}
+#contact {
+  height: 500px;
+  background-color: green;
 }
 #footer {
-  height: 500px;
+  height: 300px;
+  background-color: #162d54;
 }
