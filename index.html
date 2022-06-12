@@ -6,17 +6,61 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
     <title>Luxury Presence - Richieri</title>
+    <link rel="icon" href="https://img.icons8.com/ultraviolet/40/undefined/recent-celebrity.png" type="image/x-icon" />
   </head>
   <body>
-    <section class="header">Header</section>
-    <section class="hero">Hero</section>
-    <section class="about">About</section>
-    <section class="brands">Brands</section>
-    <section class="testimonials">Testimonials</section>
-    <section class="buildings">Buildings</section>
-    <section class="blog">Blog</section>
-    <section class="places">Places</section>
-    <section class="connect">Connect</section>
-    <section class="footer">Footer</section>
+    <section id="header">
+      <div class="brand">GATIEN SALAUN</div>
+      <div class="nav-list">
+        <div class="hamburger"><div class="bar"></div></div>
+        <ul>
+          <li><a href="#hero" data-after="Home">ABOUT</a></li>
+          <li><a href="#about" data-after="Projects">ABOUT</a></li>
+          <li><a href="#brands" data-after="About">BRANDS</a></li>
+          <li><a href="#testimonials" data-after="Services">TESTIMONIALS</a></li>
+          <li><a href="#buildings" data-after="Contact">BUILDINGS</a></li>
+          <li><a href="#blog" data-after="Contact">BLOG</a></li>
+          <li><a href="#places" data-after="Contact">PLACES</a></li>
+          <li><a href="#connect" data-after="Contact">CONTACT</a></li>
+        </ul>
+      </div>
+    </section>
+    <section id="hero">
+      <video
+        loop=""
+        muted=""
+        autoplay=""
+        poster="https://res.cloudinary.com/luxuryp/videos/f_auto,q_auto,so_0,eo_0/ocyfrocitk0mjcbpjzll/homepage-video-update-1.jpg"
+        playsinline=""
+      >
+        <source
+          src="https://res.cloudinary.com/luxuryp/videos/f_auto,q_auto/ocyfrocitk0mjcbpjzll/homepage-video-update-1.webm"
+          type="video/webm"
+        />
+        <source
+          src="https://res.cloudinary.com/luxuryp/videos/f_auto,q_auto/ocyfrocitk0mjcbpjzll/homepage-video-update-1.mp4"
+          type="video/mp4"
+        />
+      </video>
+      <div class="headerContain">
+        <h1>MAKE YOUR NEXT MOVE</h1>
+        <h4>FIND YOUR DREAM HOME. VIEW EXCLUSIVE LISTINGS.</h4>
+        <div class="searchbar">
+          <form>
+            <input type="text" placeholder="Search by Area, Zip Code or Address" />
+            <button>Search</button>
+          </form>
+        </div>
+      </div>
+    </section>
+    <section id="about" class="reveal">ABOUT</section>
+    <section id="brands" class="reveal">BRANDS</section>
+    <section id="testimonials" class="reveal">TESTIMONIALS</section>
+    <section id="buildings" class="reveal">BUILDINGS</section>
+    <section id="blog" class="reveal">BLOG</section>
+    <section id="places" class="reveal">PLACES</section>
+    <section id="connect" class="reveal">CONNECT</section>
+    <section id="footer" class="reveal">FOOTER</section>
+    <script src="./app.js"></script>
   </body>
 </html>
