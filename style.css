@@ -40,7 +40,7 @@
 }
 
 body {
-  background-color: rgb(206, 206, 206);
+  background-color: gray;
 }
 
 .reveal {
@@ -60,6 +60,7 @@ html {
   scroll-behavior: smooth;
   background-color: rgb(0, 0, 0);
   text-align: center;
+  background-color: gray;
 }
 
 a {
@@ -78,7 +79,6 @@ a {
   color: white;
   width: 100%;
   justify-content: space-between;
-  /* Make effect with js later */
   z-index: 999;
   transition: 1s ease background-color;
 }
@@ -90,16 +90,27 @@ a {
 #header .nav-list ul {
   display: flex;
   list-style-type: none;
+  align-items: center;
+  margin: auto 0;
 }
+
 #header .nav-list ul li a {
   color: inherit;
   padding: 10px 20px;
   cursor: pointer;
+  text-decoration: none;
+  font-size: 1.5rem;
+  transition: 0.5s;
+  font-weight: 500;
+}
+
+#header .nav-list ul li a:hover {
+  text-shadow: 1px 1px 2px black, 0 0 1em #162d54, 0 0 0.2em #162d54;
+  color: #162d54;
 }
 /* End Header */
 
 /* Hero */
-
 #hero {
   padding: 0;
   height: 100vh;
@@ -129,19 +140,18 @@ a {
 }
 
 #hero .header-contain h1 {
-  margin: 20px;
-  font-size: 50px;
+  margin: 40px 0;
+  font-size: 3.1rem;
   font-weight: 400;
 }
 
 #hero .header-contain h4 {
-  margin: 20px;
-  font-size: 1rem;
+  font-size: 1.5rem;
   font-weight: 300;
 }
 
 #hero .header-contain .searchbar {
-  margin: 20px;
+  margin: 40px 0;
   display: flex;
   height: 40px;
   width: 100%;
@@ -169,6 +179,7 @@ a {
   border: none;
   font-size: 0.8rem;
   background-color: rgba(255, 255, 255, 0.734);
+  font-size: 1.4rem;
 }
 
 #hero .header-contain input:focus {
@@ -178,7 +189,7 @@ a {
 #hero .header-contain button {
   cursor: pointer;
   display: inline-block;
-  padding: 10px 20px;
+  padding: 10px 15px;
   align-items: center;
   justify-content: center;
   border-radius: 0 5px 5px 0;
@@ -187,6 +198,8 @@ a {
   transition: 0.3s;
   background-color: rgba(255, 255, 255, 0.734);
   font-weight: 500;
+  font-size: 1.4rem;
+  color: black;
 }
 
 #hero .header-contain button:hover {
@@ -202,6 +215,7 @@ a {
   padding: 100px 50px;
   max-width: 1400px;
   margin: auto;
+  background-color: gray;
 }
 
 #about img {
@@ -384,7 +398,19 @@ a {
 /* Testimonials */
 #testimonials {
   height: 500px;
+  background-color: red;
 }
+#carouselExampleDark .slide {
+  display: inherit;
+  align-items: center;
+  justify-content: center;
+  position: inherit;
+  height: 100px;
+}
+#carouselExampleDark .slide img {
+  position: inherit;
+}
+
 /* End Testimonials */
 
 #buildings {
